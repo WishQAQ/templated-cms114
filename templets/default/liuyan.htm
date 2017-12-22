@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="" />
+<meta name="description" content=""/>
+<meta name="Author" content="xunmoban.com" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<LINK href="/skin/css/style.css" rel=stylesheet>
+<LINK href="/skin/css/skins/default/jbox.css" rel=stylesheet>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/common/js/functions.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/common/js/validForm/FormValid.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/common/js/jbox/jquery.jBox-2.3.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/search.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/menu.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/banner.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jQselect.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.lazyload.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.jslides.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/ajax.js"></script>
+<script type="text/javascript" src="/skin/common/js/urlredirect.js"></script>
+<!--[if lt IE 10]>
+<script type="text/javascript" src="js/PIE.js"></script>
+<![endif]-->
+<script>
+$(function() {
+    if (window.PIE) {
+        $('.returnlist,.prolist li,.pro_li_img,.pro_li_txt,.viewmore,.page *').each(function() {
+            PIE.attach(this);
+        });
+    }
+});
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="clear"></div>
+<div class="view_t">
+  <div class="vtitle">
+    <div class="vtitlemain"><font>Feedback</font> <span><b>{dede:field name='typename'/}</b></span> </div>
+  </div>
+  <div class="titleview">
+    <div class="main">当前位置：{dede:field name='position'/}</div>
+  </div>
+</div>
+<div class="fyMain">
+  <div class="viewcon">
+    <div class="message">
+      <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+
+        <ul>
+          <li>
+            <p class="message_title"><span class="c_red">* </span>姓名：</p>
+            <p class="message_content">
+              <input type="text" name="nickname" id="nickname" size="30" maxlength="10" valid="required|limit" errmsg="请输入姓名！|姓名长度必须在1-15个字符之间！" max="10" min="1" />
+            </p>
+          </li>
+          <li>
+            <p class="message_title"><span class="c_red">* </span>手机：</p>
+            <p class="message_content">
+              <input type="text" name="telephone" size="30" id="telephone" maxlength="11" valid="required|isMobile|limit" errmsg="请输入手机号码！|手机号码格式有误！|手机号码长度必须为11个字符！" max="11" min="11" />
+            </p>
+          </li>
+          <li>
+            <p class="message_title">邮箱：</p>
+            <p class="message_content">
+              <input name="email" type="text" id="email" size="30" valid="isEmail" errmsg="邮箱格式有误！" />
+            </p>
+          </li>
+          <li>
+            <p class="message_title"><span class="c_red">* </span>主题：</p>
+            <p class="message_content">
+              <input name="title" type="text" id="title" size="30" valid="required" errmsg="请填写主题！" />
+            </p>
+          </li>
+          <li class="contentb">
+            <p class="message_title"><span class="c_red">* </span>内容：</p>
+            <p class="message_content">
+              <textarea name="content" id="content1" valid="required" cols="45" rows="5" errmsg="请填写留言内容！"></textarea>
+            </p>
+          </li>
+		  <input type="hidden" name="dede_fields" value="nickname,text;telephone,text;email,text;title,text;content,multitext" />
+<input type="hidden" name="dede_fieldshash" value="0adba2e452708a44b31096d8429adaff" />
+          <li class="yzm">
+		  <p><input type="submit" name="submit" value="" class="tijiao1" width="103"/></p>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+{dede:include filename="footer.htm"/}</body>
+</html>

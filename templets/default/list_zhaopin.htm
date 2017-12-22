@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="" />
+<meta name="description" content=""/>
+<meta name="Author" content="xunmoban.com" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<LINK href="/skin/css/style.css" rel=stylesheet>
+<LINK href="/skin/css/skins/default/jbox.css" rel=stylesheet>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/common/js/functions.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/common/js/validForm/FormValid.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/common/js/jbox/jquery.jBox-2.3.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/search.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/menu.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/banner.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jQselect.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.lazyload.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="/skin/common/js/urlredirect.js"></script>
+<!--[if lt IE 10]>
+<script type="text/javascript" src="js/PIE.js"></script>
+<![endif]-->
+<script>
+$(function() {
+    if (window.PIE) {
+        $('.returnlist,.prolist li,.pro_li_img,.pro_li_txt,.viewmore,.page *').each(function() {
+            PIE.attach(this);
+        });
+    }
+});
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="clear"></div>
+<div class="view_t">
+  <div class="vtitle">
+    <div class="vtitlemain"><font>Recruitment</font> <span><b>{dede:field name='typename'/}</b></span> </div>
+  </div>
+  <div class="titleview">
+    <div class="main">当前位置：{dede:field name='position'/}</div>
+  </div>
+</div>
+<div class="fyMain">
+  {dede:list pagesize="6"}
+  <div class="hrBox">
+    <div class="hrBoxL">
+      <ul>
+        <li><span>所需职位：</span></li>
+        <li class="bgWhite">所需人数：</li>
+        <li class="haode">具体要求：</li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+	<div class="hrBoxR">
+      <ul>
+        <li class="topline"><span class="fl">[field:title/]</span><a href="http://wpa.qq.com/msgrd?v=3&uin=6009709&site=qq&menu=yes" class="fr" title="应聘此职位"><img src="/skin/images/re.gif" width="90" height="26" /></a>
+          <div class="clear"></div>
+        </li>
+        <li class="bgWhite">[field:renshu/]
+          <div class="clear"></div>
+        </li>
+        <li class="haode">
+		[field:body/]
+		</li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  {/dede:list}
+  <div class="page">{dede:pagelist istitem="index,pre,next,end," listsize="5"/}</div>
+</div>
+<div class="clear"></div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

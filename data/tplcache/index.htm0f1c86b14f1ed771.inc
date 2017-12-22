@@ -1,0 +1,42 @@
+<?php
+$z[0]=Array("global","",254,280);
+$z[0][4]['name']="cfg_webname";
+$z[1]=Array("global","",645,673);
+$z[1][4]['name']="cfg_mobileurl";
+$z[2]=Array("global","",1152,1180);
+$z[2][4]['name']="cfg_mobileurl";
+$z[3]=Array("include","",2581,2622);
+$z[3][4]['filename']="head_index.htm";
+$z[4]=Array("global","",3087,3113);
+$z[4][4]['name']="cfg_dianhua";
+$z[5]=Array("arclist","\r\n		  <li> <a href=\"[field:arcurl/]\" title=\"[field:title/]\"><img src=\"[field:picname/]\" width=\"160\" height=\"120\"/>\r\n            <p class=\"iproname\">[field:title/]</p>\r\n            </a> </li>\r\n		 ",3534,3816);
+$z[5][4]['typeid']="2";
+$z[5][4]['row']="6";
+$z[5][4]['titlelen']="20";
+$z[5][4]['infolen']="150";
+$z[5][4]['orderby']="pubdate";
+$z[6]=Array("arclist","\r\n	  <li> <a href=\"[field:arcurl/]\"><img src=\"[field:picname/]\" width=\"318\" height=\"239\"/></a> <a href=\"[field:arcurl/]\" class=\"protxt\">[field:title/]</a> </li>\r\n	  ",4072,4324);
+$z[6][4]['typeid']="3";
+$z[6][4]['row']="6";
+$z[6][4]['titlelen']="20";
+$z[6][4]['infolen']="150";
+$z[6][4]['orderby']="pubdate";
+$z[7]=Array("type","<a href=\"[field:typeurl/]\"> 查看更多 +</a>",4357,4437);
+$z[7][4]['typeid']="3";
+$z[8]=Array("arclist","\r\n	  <li [field:global name='autoindex' runphp='yes']@me=(@me%2==0)?'class=\"newsodd\"':'class=\"newseven\"';[/field:global]><a href=\"[field:arcurl/]\">\r\n        <p class=\"news_t\">[field:title/]</p>\r\n        <p>[field:infos/]...</p>\r\n        </a></li>\r\n		",4583,4920);
+$z[8][4]['typeid']="3";
+$z[8][4]['row']="6";
+$z[8][4]['titlelen']="20";
+$z[8][4]['infolen']="150";
+$z[8][4]['orderby']="pubdate";
+$z[9]=Array("type","<a href=\"[field:typeurl/]\"> 查看更多 +</a>",4953,5033);
+$z[9][4]['typeid']="3";
+$z[10]=Array("flink"," [field:link /] ",5250,5338);
+$z[10][4]['row']="24";
+$z[10][4]['type']="image";
+$z[10][4]['titlelen']="24";
+$z[10][4]['typeid']="0";
+$z[11]=Array("include","",5396,5433);
+$z[11][4]['filename']="footer.htm";
+
+?>

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="" />
+<meta name="description" content=""/>
+<meta name="Author" content="xunmoban.com" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<LINK href="/skin/css/style.css" rel=stylesheet>
+<LINK href="/skin/css/skins/default/jbox.css" rel=stylesheet>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/common/js/functions.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/common/js/validForm/FormValid.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/common/js/jbox/jquery.jBox-2.3.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/search.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/menu.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/banner.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jQselect.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.lazyload.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="/skin/common/js/urlredirect.js"></script>
+<!--[if lt IE 10]>
+<script type="text/javascript" src="js/PIE.js"></script>
+<![endif]-->
+<script>
+$(function() {
+    if (window.PIE) {
+        $('.returnlist,.prolist li,.pro_li_img,.pro_li_txt,.viewmore,.page *').each(function() {
+            PIE.attach(this);
+        });
+    }
+});
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="clear"></div>
+<div class="view_t">
+  <div class="vtitle">
+    <div class="vtitlemain"><font>SERVICE</font> <span><b>{dede:field name='typename'/}</b></span> </div>
+  </div>
+  <div class="titleview">
+    <div class="main">当前位置：{dede:field name='position'/}</div>
+  </div>
+  <div class="vnav">
+    <div class="main">
+	{dede:channel row="10" type="son" col="1"}
+		<a href="[field:typeurl/]">[field:typename/]</a>
+		{/dede:channel}
+	</div>
+  </div>
+</div>
+<div class="fyMain">
+  <h2 class="center"><span class="fl"><font>Title</font><br />
+    {dede:field.title/}</span> <span class="fr">{dede:prenext get='preimg'/}
+	  {dede:prenext get='nextimg'/}</span> </h2>
+  <p class="title_s"> 发布时间：{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}&nbsp;&nbsp;&nbsp;&nbsp;作者：{dede:field.writer/}&nbsp;&nbsp;&nbsp;&nbsp;点击量：<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script> </p>
+  <div class="line_s"></div>
+  <!--<p class="center"><img src="/skin/upfile/isClass/pic/20150511164745-1254818292.jpg" alt="" /></p>-->
+  <div class="newsview">
+    {dede:field.body/}
+  </div>
+  {dede:type typeid='0' row=1}<a href="[field:typelink /]" title="返回列表" class="returnlist">返回列表</a>{/dede:type}  </div>
+<div class="clear"></div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

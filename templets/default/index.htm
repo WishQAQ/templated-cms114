@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="" />
+<meta name="description" content=""/>
+<meta name="Author" content="xunmoban.com" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<LINK href="skin/css/style.css" rel=stylesheet>
+<LINK href="skin/css/skins/default/jbox.css" rel=stylesheet>
+<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/index.php";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="JavaScript" type="text/javascript" src="skin/js/jquery.js"></script>
+<script language="JavaScript" type="text/javascript" src="skin/common/js/functions.js"></script>
+<script language="JavaScript" type="text/javascript" src="skin/common/js/validForm/FormValid.js"></script>
+<script language="JavaScript" type="text/javascript" src="skin/common/js/jbox/jquery.jBox-2.3.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="skin/js/search.js"></script>
+<script language="JavaScript" type="text/javascript" src="skin/js/menu.js"></script>
+<script language="JavaScript" type="text/javascript" src="skin/js/banner.js"></script>
+<script language="JavaScript" type="text/javascript" src="skin/js/jQselect.js"></script>
+<script language="JavaScript" type="text/javascript" src="skin/js/jquery.lazyload.js"></script>
+<script language="JavaScript" type="text/javascript" src="skin/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="skin/common/js/urlredirect.js"></script>
+<!--[if lt IE 10]>
+<script type="text/javascript" src="js/PIE.js"></script>
+<![endif]-->
+<script>
+$(function() {
+    if (window.PIE) {
+        $('.more a,.case li,.ipro li').each(function() {
+            PIE.attach(this);
+        });
+    }
+});
+</script>
+</head>
+<body>
+{dede:include filename="head_index.htm"/}
+<div class="clear"></div>
+<div class="indexbg">
+  <div class="notice">
+    <div class="noticebg">
+      <div></div>
+    </div>
+    <div class="main">
+      <marquee scrollamount="2" scrolldelay="5" onMouseOut="this.start()" onMouseOver="this.stop()">
+      公告：加入站窝窝高级会员，免费下载vip模板，优惠下载商业模板（WWW.ZHANOO.COM）！
+      </marquee>
+      <div class="tel">
+        <p>服务热线</p>
+        <font>{dede:global.cfg_dianhua/}</font> </div>
+    </div>
+  </div>
+  <div class="main service">
+    <div class="ititle">
+      <p>我们的服务</p>
+      <font>Service</font> </div>
+    <div class="slider"> <span id="left" class="end"><img src="/skin/images/left.gif"/></span><span id="right"><img src="/skin/images/right.gif"/></span> </div>
+    <div class="ipro" id="ipro2">
+      <div class="main">
+        <ul class="">
+          
+		  {dede:arclist typeid=2 row=6 titlelen=20 infolen=150 orderby='pubdate' }
+		  <li> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" width="160" height="120"/>
+            <p class="iproname">[field:title/]</p>
+            </a> </li>
+		 {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="case">
+    <div class="casetop"> </div>
+    <div class="ititle">
+      <p>我们的案例</p>
+      <font>case</font> </div>
+    <ul class="main">
+       {dede:arclist typeid=3 row=6 titlelen=20 infolen=150 orderby='pubdate' }
+	  <li> <a href="[field:arcurl/]"><img src="[field:picname/]" width="318" height="239"/></a> <a href="[field:arcurl/]" class="protxt">[field:title/]</a> </li>
+	  {/dede:arclist}
+    </ul>
+    <p class="more">{dede:type typeid='3'}<a href="[field:typeurl/]"> 查看更多 +</a>{/dede:type}</p>
+  </div>
+  <div class="main newsul">
+    <div class="ititle">
+      <p>新闻动态</p>
+      <font>NEWS</font> </div>
+    <ul>
+      {dede:arclist typeid=3 row=6 titlelen=20 infolen=150 orderby='pubdate' }
+	  <li [field:global name='autoindex' runphp='yes']@me=(@me%2==0)?'class="newsodd"':'class="newseven"';[/field:global]><a href="[field:arcurl/]">
+        <p class="news_t">[field:title/]</p>
+        <p>[field:infos/]...</p>
+        </a></li>
+		{/dede:arclist}
+    </ul>
+    <p class="more">{dede:type typeid='3'}<a href="[field:typeurl/]"> 查看更多 +</a>{/dede:type}</p>
+  </div>
+  <div class="qlink">
+    <div class="ititle">
+      <p>友情链接</p>
+      <font>我们服务过的客户，我们维系到今天的朋友...</font> </div>
+    <ul class="main qlinkul">
+      {dede:flink row='24' type='image' titlelen="24" typeid="0"} [field:link /] {/dede:flink}
+    </ul>
+  </div>
+</div>
+<div class="clear"></div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

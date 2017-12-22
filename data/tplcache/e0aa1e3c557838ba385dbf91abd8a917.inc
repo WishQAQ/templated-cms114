@@ -1,0 +1,15 @@
+
+<field:nickname itemname="姓名" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
+</field:nickname>
+
+<field:telephone itemname="手机" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
+</field:telephone>
+
+<field:email itemname="邮箱" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
+</field:email>
+
+<field:title itemname="主题" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
+</field:title>
+
+<field:content itemname="内容" autofield="1" type="multitext" isnull="true" default=""  maxlength="250" page="">
+</field:content>

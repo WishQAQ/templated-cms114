@@ -1,0 +1,1 @@
+<li> <a href="view.php?aid=[field:id/]" title="[field:title/]"><img src="[field:picname/]" width="298" height="224"/></a> <a href="[field:arcurl/]" class="protxt">[field:title/]</a> </li>

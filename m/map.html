@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="Author" content="xunmoban.com" />
+<title>地图</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="/m/public/css/master.css" />
+<link rel="stylesheet" type="text/css" href="/m/public/css/subpage.css" />
+<link rel="stylesheet" type="text/css" href="/m/public/css/child_vip.css" />
+<script type="text/javascript" src="/m/public/js/jquery.js"></script>
+<style>
+    .head{
+        background:#000    }
+    .foot{
+        background:#000    }
+    .nav{
+        background:#000    }
+    .nav_color{
+        background:#000    }
+</style>
+<script type="text/javascript" src="/m/public/js/nav.js"></script>
+<script type="text/javascript" src="/m/public/js/cart_icon.js"></script>
+</head>
+<body>
+<ul class="nav">
+  <li><a href="index.php" title="首页"><span class="iconfont">&#xe607;</span>首页</a></li>
+  <li><a href="list.php?tid=1" title="关于我们">关于我们</a></li>
+  <li><a href="list.php?tid=2" title="服务项目">服务项目</a></li>
+  <li><a href="list.php?tid=3" title="成功案例">成功案例</a></li>
+  <li><a href="list.php?tid=7" title="新闻动态">新闻动态</a></li>
+  <li><a href="list.php?tid=11" title="人才招聘">人才招聘</a></li>
+  <li><a href="list.php?tid=12" title="在线留言">在线留言</a></li>
+  <li><a href="list.php?tid=13" title="联系我们">联系我们</a></li>
+</ul>
+<div class="allpage">
+  <div class="black-fixed iconfont">&#xe60f;</div>
+  <div class="header">
+    <div class="contact_top"> 加盟电话： <a href="tel:13580510988" title="">13580510988</a> </div>
+    <div class="head"> <a href="index.php" title="首页" class="home-btn commonfont">&#xe608;</a>
+      <p class="top-title">地图</p>
+      <div class="nav-btn commonfont">&#xe60b;</div>
+    </div>
+  </div>
+  <div class="content">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+    <div id="allmap"></div>
+    <script type="text/javascript">
+                window.onload = function (){
+                    var map = new BMap.Map("allmap");
+                    map.centerAndZoom(new BMap.Point(125.330767,43.914504), 18);
+                    var marker1 = new BMap.Marker(new BMap.Point(125.330767,43.914504));  // 创建标注
+                    map.addOverlay(marker1);              // 将标注添加到地图中
+                    marker1.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+                    //创建信息窗口
+                    var infoWindow1 = new BMap.InfoWindow("站窝窝<BR>广州市天河区迎龙路161号");
+                    marker1.openInfoWindow(infoWindow1);
+                }
+            </script>
+  </div>
+  <div class="blank_f"></div>
+  <div class="footer">
+    <div class="foot foot-relative" id="foot">
+      <div class="foot-relative"> <a href="/m/map.html" title="地图"> <span class="commonfont">&#xe605;</span>
+        <h3>地图</h3>
+        </a><a href="tel:{dede:global.cfg_dianhua/}" title="电话"> <span class="commonfont">&#xe604;</span>
+        <h3>电话</h3>
+        </a><a href="sms:13580510988" title="短信"> <span class="commonfont">&#xe601;</span>
+        <h3>短信</h3>
+        </a><a href="mailto:6009709@qq.com" title="邮箱"> <span class="commonfont">&#xe603;</span>
+        <h3>邮箱</h3>
+        </a> </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

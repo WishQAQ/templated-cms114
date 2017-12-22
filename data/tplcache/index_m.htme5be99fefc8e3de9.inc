@@ -1,0 +1,41 @@
+<?php
+$z[0]=Array("global","",345,371);
+$z[0][4]['name']="cfg_webname";
+$z[1]=Array("global","",424,454);
+$z[1][4]['name']="cfg_description";
+$z[2]=Array("global","",491,518);
+$z[2][4]['name']="cfg_keywords";
+$z[3]=Array("include","",1389,1426);
+$z[3][4]['filename']="head_m.htm";
+$z[4]=Array("type","<a href=\"list.php?tid=[field:id/]\" class=\"son\">\r\n      <p class=\"imgFont\"><span class=\"iconfont_s\">&#xe600;</span>[field:typename/]</p>\r\n      </a>",2526,2707);
+$z[4][4]['typeid']="1";
+$z[5]=Array("type","<a href=\"list.php?tid=[field:id/]\" class=\"son\">\r\n      <p class=\"imgFont\"><span class=\"iconfont_s\">&#xe637;</span>[field:typename/]</p>\r\n      </a>",2708,2889);
+$z[5][4]['typeid']="2";
+$z[6]=Array("type","<a href=\"list.php?tid=[field:id/]\" class=\"son\">\r\n      <p class=\"imgFont\"><span class=\"iconfont_s\">&#xe604;</span>[field:typename/]</p>\r\n      </a>",2890,3071);
+$z[6][4]['typeid']="3";
+$z[7]=Array("type","<a href=\"list.php?tid=[field:id/]\" class=\"son\">\r\n      <p class=\"imgFont\"><span class=\"iconfont_s\">&#xe818;</span>[field:typename/]</p>\r\n      </a>",3072,3254);
+$z[7][4]['typeid']="13";
+$z[8]=Array("arclist","\r\n        <li> <a href=\"view.php?aid=[field:id/]\" title=\"[field:title/]\"><img src=\"[field:picname/]\" alt=\"[field:title/]\"> <span>[field:title/]</span></a> </li>\r\n        ",3517,3745);
+$z[8][4]['row']="4";
+$z[8][4]['typeid']="2";
+$z[8][4]['titlelen']="60";
+$z[9]=Array("type","<a href=\"list.php?tid=[field:id/]\" title=\"查看更多\">查看更多+</a>",3831,3938);
+$z[9][4]['typeid']="2";
+$z[10]=Array("arclist","\r\n        <li> <span></span> <a href=\"view.php?aid=[field:id/]\" title=\"\">\r\n          <h3>[field:title/]</h3>\r\n          <p>[field:infos/]…</p>\r\n          </a> </li>\r\n        ",4155,4389);
+$z[10][4]['row']="2";
+$z[10][4]['typeid']="7";
+$z[10][4]['titlelen']="60";
+$z[11]=Array("type","<a href=\"list.php?tid=[field:id/]\" title=\"查看更多\">查看更多+</a>",4481,4588);
+$z[11][4]['typeid']="7";
+$z[12]=Array("arclist","\r\n        <li> <a href=\"view.php?aid=[field:id/]\" title=\"[field:title/]\"><img src=\"[field:picname/]\" alt=\"[field:title/]\"> <span>[field:title/]…</span></a> </li>\r\n        ",4839,5070);
+$z[12][4]['row']="4";
+$z[12][4]['typeid']="3";
+$z[12][4]['titlelen']="60";
+$z[13]=Array("type","<a href=\"list.php?tid=[field:id/]\" title=\"查看更多\">查看更多+</a>",5156,5263);
+$z[13][4]['typeid']="3";
+$z[14]=Array("type","<a href=\"list.php?tid=[field:id/]\" title=\"查看更多\">查看更多+</a>",5783,5890);
+$z[14][4]['typeid']="1";
+$z[15]=Array("include","",6295,6334);
+$z[15][4]['filename']="footer_m.htm";
+
+?>
